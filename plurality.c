@@ -1,3 +1,5 @@
+//This is my answer for CS50 course problem set 3, plurality.
+// Done on Jan 22nd, 2021
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -84,12 +86,13 @@ void print_winner(void)
     int maxvote = 0;
     for(int i = 0; i < candidate_count ; i++)
     {
+        //Getting the most voted candidate by using same concept of selection sort
         if(candidates[i].votes > maxvote)
         {
             maxvote = candidates[i].votes;
         }
     }
-//아직 최고득표자 수가 2명 이상인 경우까지 for loop로 해결
+//You can use for loop to print even if the most voted person is more than one
  for (int i = 0; i < candidate_count; i++)
     { 
         if (candidates[i].votes == maxvote)
